@@ -10,6 +10,6 @@ RUN npm install nodemon
 
 COPY . .
 
-EXPOSE 1999
+EXPOSE 8080
 
-CMD ["npm","start"]
+CMD ["node","index.js"]
