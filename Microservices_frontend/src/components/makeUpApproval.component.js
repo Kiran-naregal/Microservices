@@ -22,7 +22,7 @@ export default class MakeApproval extends Component{
 
     updatestudent(id, cou) {
 
-        axios.post(`${process.env.REACT_APP_API_MAKE}approveMakeup/` + id, { cou: cou })
+        axios.post(`${process.env.REACT_APP_API_MAKE}/approveMakeup/` + id, { cou: cou })
             .then((res) => {
                 // console.log(res.data.data)
                 axios.get(`${process.env.REACT_APP_API_MAKE}`)
@@ -38,7 +38,7 @@ export default class MakeApproval extends Component{
     }
 
     deletestudent(id, cou){
-        axios.post(`${process.env.REACT_APP_API_MAKE}rejectMakeup/` + id, { cou: cou })
+        axios.post(`${process.env.REACT_APP_API_MAKE}/rejectMakeup/` + id, { cou: cou })
         .then((res) => {
             // console.log(res.data.data)
             axios.get(`${process.env.REACT_APP_API_MAKE}`)

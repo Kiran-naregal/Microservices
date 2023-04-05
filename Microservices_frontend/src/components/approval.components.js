@@ -25,7 +25,7 @@ export default class Approve extends Component {
     }
     updatestudent(id, cou) {
 
-        axios.post(`${process.env.REACT_APP_API_USER}update/` + id, { cou: cou })
+        axios.post(`${process.env.REACT_APP_API_USER}/update/` + id, { cou: cou })
             .then((res) => {
                 // console.log(res.data.data)
                 axios.get(`${process.env.REACT_APP_API_USER}`)
@@ -41,7 +41,7 @@ export default class Approve extends Component {
     }
 
     deletestudent(id, cou){
-        axios.post(`${process.env.REACT_APP_API_USER}reject/` + id, { cou: cou })
+        axios.post(`${process.env.REACT_APP_API_USER}/reject/` + id, { cou: cou })
         .then((res) => {
             // console.log(res.data.data)
             axios.get(`${process.env.REACT_APP_API_USER}`)

@@ -28,7 +28,7 @@ export default class CourseList extends Component {
     handleDelete = (id)=>{
         console.log('Delete '+id);
 
-        axios.delete(`${process.env.REACT_APP_API_COURSE}delete?&id=${id}`)
+        axios.delete(`${process.env.REACT_APP_API_COURSE}/delete?&id=${id}`)
             .then((res)=>{
                 if(res.data.success === true){
                     const newCourse = this.state.course.filter(cour => cour._id !== id);

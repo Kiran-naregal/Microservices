@@ -26,7 +26,7 @@ export default class Display extends Component {
 
 
         // console.log(this.state.semOptions)
-        axios.get(`${process.env.REACT_APP_API_USER}appr?&year=${(new Date()).getFullYear()}&sem=${(e.target.value)}`)
+        axios.get(`${process.env.REACT_APP_API_USER}/appr?&year=${(new Date()).getFullYear()}&sem=${(e.target.value)}`)
             .then(Response => {
                 // console.log(Response.data.data)
                 this.setState({ approvedStudents: Response.data.data })

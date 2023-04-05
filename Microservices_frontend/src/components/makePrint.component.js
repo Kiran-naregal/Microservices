@@ -14,7 +14,7 @@ export default class MakePrint extends Component{
     onChangeSem = (e) =>{
         this.setState({sem: e.target.value});
 
-        axios.get(`${process.env.REACT_APP_API_MAKE}apprMakeUp?&year=${(new Date()).getFullYear()}&sem=${(e.target.value)}`)
+        axios.get(`${process.env.REACT_APP_API_MAKE}/apprMakeUp?&year=${(new Date()).getFullYear()}&sem=${(e.target.value)}`)
             .then(Response => {
                 console.log(Response.data.data)
                 this.setState({ student: Response.data.data })
